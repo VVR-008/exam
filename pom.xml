@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>SE</groupId>
+  <artifactId>HAMS</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+
+  <name>HAMS Maven Webapp</name>
+  <!-- FIXME change it to the project's website -->
+  <url>http://www.example.com</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>8</maven.compiler.source>
+    <maven.compiler.target>7</maven.compiler.target>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <build>
+    <finalName>HAMS</finalName>
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+      <plugins>
+        <plugin>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>3.4.0</version>
+        </plugin>
+        <!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_war_packaging -->
+        <plugin>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>3.3.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.13.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>3.3.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-war-plugin</artifactId>
+          <version>3.4.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>3.1.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>3.1.2</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+</project>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+git push -u origin main
+Note: Use main or master depending on the default branch name of your GitHub repository.
+
+2. Fixing an Unpushed Commit Message
+Since you haven't pushed the commit, you can use git commit --amend to change the message.
+
+Bash
+
+git commit --amend -m "Added Docter Module"
+This command rewrites the last commit.
+
+3. Git Commands for Viewing File Status
+To see modified but uncommitted files, use:
+
+git status
+
+4. Viewing Commit History in a Compact Format
+To view a concise, one-line log of commits, use:
+
+git log --oneline
+
+5. Recovering a Deleted Uncommitted File
+Since you haven't committed the deletion, you can use git restore to bring the file back to its last committed state.
+
+git restore <file-name>
+
+For your specific case:
+
+Bash
+
+git restore appontmentSer.java
+6. Cloning and Switching Branches
+To clone the repository and immediately switch to the feature/patient branch:
+
+Bash
+
+git clone -b feature/patient <repository-url>
+7. Creating and Switching Branches
+To create a new branch named feature/billing and switch to it, use the git switch command:
+
+git switch -c feature/billing
+
+8. Listing Local and Remote Branches
+To list both local and remote branches:
+
+git branch -a
+
+9. Deleting a Local Branch
+To delete the extra local branch named feature/billing, use the -d flag. Use -D to force the deletion if the branch has unmerged changes.
+
+git branch -d feature/billing
+
+10. Creating and Applying a Patch File
+Create a Patch
+To create a patch file for changes in BillingService.java, first, stage the file, and then use git diff to create the patch.
+
+Step 1: Stage the modified file: git add BillingService.java
+
+Step 2: Create the patch file: git diff --staged > fix_billing_bug.patch
+
+Apply a Patch
+To apply a patch file sent by your teammate, use git apply:
+
+git apply <patch-file-name>
+
+For example:
+
+Bash
+
+git apply teamate_patch.patch
+11. Combining Multiple Commits
+To combine multiple small commits into one before pushing, you can use git rebase -i (interactive rebase).
+
+git rebase -i HEAD~N (where N is the number of commits you want to combine)
+
+Note: In the interactive editor that appears, change the command for all but the first commit from pick to squash or s.
+
+12. Cloning a Repository
+To clone the main hospital repository to your system, use:
+
+git clone https://github.com/priyaHarish2317/Hospital-Appointment-Management-System-.git	
